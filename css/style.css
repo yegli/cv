@@ -1,20 +1,24 @@
 /* Global Styles */
-body {
-    font-family: 'Roboto', sans-serif;
+* {
     margin: 0;
     padding: 0;
-    background-color: #1a1a1d;
-    color: #fff;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff;
+    color: #333;
     line-height: 1.6;
-    overflow-x: hidden;
+    padding: 20px 40px; /* Added padding to create space around the content */
   }
   
   h1, h2, h3 {
-    color: #00bcd4; /* KubeCon blue for tech vibe */
+    color: #2c3e50;
   }
   
   a {
-    color: #00bcd4;
+    color: #3498db;
     text-decoration: none;
   }
   
@@ -23,10 +27,10 @@ body {
   }
   
   header {
-    background-color: #212121;
-    padding: 50px 0;
-    text-align: center;
-    border-bottom: 4px solid #00bcd4;
+    background-color: #3498db;
+    padding: 50px 20px;
+    color: white;
+    text-align: left; /* Align text to the left */
   }
   
   header h1 {
@@ -34,13 +38,15 @@ body {
     margin: 0;
   }
   
-  header p {
-    font-size: 1.25rem;
-    margin: 10px 0;
+  header p.title {
+    font-size: 1.5rem;
+    margin-top: 10px;
   }
   
   main {
-    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0; /* Added padding to create space around the sections */
   }
   
   section {
@@ -50,14 +56,16 @@ body {
   section h2 {
     font-size: 2rem;
     margin-bottom: 15px;
+    color: #2c3e50;
     text-transform: uppercase;
-    border-bottom: 2px solid #00bcd4;
-    padding-bottom: 5px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
   }
   
   section p {
     font-size: 1.1rem;
     margin-bottom: 10px;
+    color: #7f8c8d;
   }
   
   ul {
@@ -67,41 +75,192 @@ body {
   
   ul li {
     font-size: 1.1rem;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     display: inline-block;
-    background-color: #333;
-    padding: 5px 15px;
+    background-color: #ecf0f1;
+    padding: 8px 16px;
     margin-right: 10px;
-    border-radius: 3px;
+    border-radius: 5px;
   }
   
   .job, .project {
     margin-bottom: 20px;
   }
   
+  .job h3, .project h3 {
+    color: #3498db;
+  }
+  
   footer {
-    background-color: #212121;
-    text-align: center;
+    background-color: #2c3e50;
+    text-align: left; /* Align text to the left */
     padding: 15px;
-    border-top: 4px solid #00bcd4;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    color: white;
   }
   
   footer p {
     font-size: 1rem;
-    color: #888;
+    color: #bdc3c7;
+  }
+  
+  /* Skills Section */
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Align items to the left */
+    gap: 20px;
+    padding: 20px 0;
+  }
+  
+  .skill-box {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    width: 150px;
+    height: 150px; /* Set a fixed height to make all boxes uniform */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center; /* Center the text */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .skill-box:hover {
+    background-color: #3498db;
+    color: white;
+    transform: translateY(-5px);
+  }
+  
+/* Styling for the certifications section */
+#certifications {
+    padding: 20px;
+}
+
+#certifications h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#certifications ul {
+    list-style-type: none;
+    padding: 0;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+#certifications li {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the certifications section */
+#certifications {
+    padding: 20px;
+}
+
+ h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#certifications ul {
+    list-style-type: none;
+    padding: 0;
+    max-height: 500px;
+    overflow-y: auto;
+    margin: 0;
+}
+
+/* Each certification item has consistent size */
+#certifications li {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: block; /* Ensure items are block level */
+    width: 100%; /* Ensures full width of container */
+}
+
+/* Hover effect to slightly change the background and scale */
+#certifications li:hover {
+    background-color: #e6f7ff;
+    transform: translateY(-5px);
+}
+
+#certifications li h3 {
+    font-size: 1.25rem;
+    margin: 0 0 5px 0;
+}
+
+#certifications li p {
+    margin: 5px 0;
+    color: #666;
+    font-size: 1rem;
+}
+
+/* Scroll effect for smooth scrolling, less visible scrollbar */
+#certifications ul::-webkit-scrollbar {
+    width: 6px; /* Thinner scrollbar */
+}
+
+#certifications ul::-webkit-scrollbar-thumb {
+    background-color: #bbb; /* Lighter color for the thumb */
+    border-radius: 4px;
+}
+
+#certifications ul::-webkit-scrollbar-thumb:hover {
+    background-color: #888; /* Slightly darker thumb on hover */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    #certifications li {
+        padding: 10px;
+    }
+}
+
+
+  
+  form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  form .btn {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  form .btn:hover {
+    background-color: #2980b9;
   }
   
   /* Responsive Design */
   @media (max-width: 768px) {
     body {
-      padding: 0 10px;
+      padding: 0 20px;
     }
   
     header h1 {
-      font-size: 2rem;
+      font-size: 2.5rem;
     }
   
     section h2 {
@@ -110,6 +269,34 @@ body {
   
     ul li {
       font-size: 1rem;
+    }
+  
+    form input, form textarea {
+      padding: 12px;
+      margin: 12px 0;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    header h1 {
+      font-size: 2rem;
+    }
+  
+    section h2 {
+      font-size: 1.3rem;
+    }
+  
+    section p {
+      font-size: 1rem;
+    }
+  
+    ul li {
+      font-size: 0.9rem;
+      padding: 6px 12px;
+    }
+  
+    footer p {
+      font-size: 0.9rem;
     }
   }
   
